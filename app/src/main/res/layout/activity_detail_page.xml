@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailPageActivity">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:padding="20dp">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background= "@drawable/text_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background= "#BBBBBB"
+                android:gravity="center_vertical"
+                android:text="概要データ"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background= "@drawable/text_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background= "#EEEEEE"
+                android:gravity="center_vertical"
+                android:text="会社名"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+            <TextView
+                android:id="@+id/companyName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background= "@drawable/text_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EEEEEE"
+                android:gravity="center_vertical"
+                android:text="評価"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+            <TextView
+                android:id="@+id/assessment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background= "@drawable/text_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EEEEEE"
+                android:gravity="center_vertical"
+                android:text="仮条件下限価格"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+            <TextView
+                android:id="@+id/minPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background= "@drawable/text_border">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EEEEEE"
+                android:gravity="center_vertical"
+                android:text="仮条件上限価格"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+            <TextView
+                android:id="@+id/maxPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background= "@drawable/text_border">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EEEEEE"
+                android:baselineAligned="false"
+                android:gravity="center_vertical"
+                android:text="BB開始日"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+
+            <TextView
+                android:id="@+id/applicationStart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background= "@drawable/text_border">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EEEEEE"
+                android:gravity="center_vertical"
+                android:text="BB終了日"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+            <TextView
+                android:id="@+id/applicationEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background= "@drawable/text_border">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EEEEEE"
+                android:gravity="center_vertical"
+                android:text="公開価格"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+            <TextView
+                android:id="@+id/offeringPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background= "@drawable/text_border">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EEEEEE"
+                android:gravity="center_vertical"
+                android:text="購入開始日"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+            <TextView
+                android:id="@+id/purchaseStart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background= "@drawable/text_border">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EEEEEE"
+                android:gravity="center_vertical"
+                android:text="購入終了日"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+            <TextView
+                android:id="@+id/purchaseEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background= "@drawable/text_border">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EEEEEE"
+                android:gravity="center_vertical"
+                android:text="上場日"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+            <TextView
+                android:id="@+id/listingDate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="20px"
+                android:paddingLeft="10px" />
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
