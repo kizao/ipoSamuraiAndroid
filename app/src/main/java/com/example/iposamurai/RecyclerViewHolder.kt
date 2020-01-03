@@ -8,7 +8,7 @@ class RecyclerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     // 独自に作成したListener
     interface ItemClickListener {
-        fun onItemClick(view: View, position: Int)
+        fun onItemClick(view: View, position: Map<String, Any?>)
     }
 
     val itemTextView: TextView = view.findViewById(R.id.itemTextView)

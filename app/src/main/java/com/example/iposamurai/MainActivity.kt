@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val ipos  = mutableListOf<String>()
+        val ipos  = mutableListOf<Map<String, Any?>>()
         val db = FirebaseFirestore.getInstance()
         var TAG =""
         db.collection("ipoCompanies")
@@ -27,7 +27,24 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
                     val companyName : String = document.getString("companyName").toString()
                     val assessment : String = document.getString("assessment").toString()
                     val companyNameAssessment : String = companyName + "(" + assessment + ")"
-                    ipos.add(companyNameAssessment)
+                    var maxPrice  = document.get("maxPrice").toString()
+                    var minPrice  = document.get("minPrice").toString()
+                    var offeringPrice = document.get("offeringPrice").toString()
+                    var initialPrice = document.get("initialPrice").toString()
+                    var applicationStart : String = document.getString("applicationStart").toString()
+                    var applicationEnd : String = document.getString("applicationEnd").toString()
+                    var purchaseStart : String = document.getString("purchaseStart").toString()
+                    var purchaseEnd : String = document.getString("purchaseEnd").toString()
+                    var listingDate : String = document.getString("listingDate").toString()
+                    val ipo = mapOf(
+                        "companyNameAssessment" to companyNameAssessment,
+                        "maxPrice" to maxPrice,
+                        "minPrice" to minPrice,
+                        "applicationStart" to applicationStart,
+                        "applicationEnd" to applicationEnd
+                    )
+
+                    ipos.add(ipo)
                     Log.d(TAG, "DocumentSnapshot data: ${companyName}")
                 }
                 mainRecyclerView.adapter = RecyclerAdapter(this, this, ipos)
@@ -38,7 +55,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
             }
     }
 
-    override fun onItemClick(view: View, position: Int) {
+    override fun onItemClick(view: View, position: Map<String, Any?>) {
         Toast.makeText(applicationContext, "position $position was tapped", Toast.LENGTH_SHORT).show()
     }
 }

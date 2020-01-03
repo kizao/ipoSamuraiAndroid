@@ -1,10 +1,11 @@
+
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.iposamurai.R
 
-class RecyclerAdapter(private val context: Context, private val itemClickListener: RecyclerViewHolder.ItemClickListener, private val itemList:List<String>) : RecyclerView.Adapter<RecyclerViewHolder>() {
+class RecyclerAdapter(private val context: Context, private val itemClickListener: RecyclerViewHolder.ItemClickListener, private val itemList:MutableList<Map<String,Any?>>) : RecyclerView.Adapter<RecyclerViewHolder>() {
 
     private var mRecyclerView : RecyclerView? = null
 
@@ -22,11 +23,13 @@ class RecyclerAdapter(private val context: Context, private val itemClickListene
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         holder.let {
 
-            it.itemTextView.text = itemList.get(position)
-            it.itemTextView2.text = "1000円"
-            it.itemTextView3.text = "1300円"
-            it.itemTextView4.text = "12/22"
-            it.itemTextView5.text = "12/24"
+            var item = itemList.get(position)
+            println(item)
+            it.itemTextView.text = item["companyNameAssessment"] as CharSequence?
+            it.itemTextView2.text = item["minPrice"] as CharSequence?
+            it.itemTextView3.text = item["maxPrice"] as CharSequence?
+            it.itemTextView4.text = item["applicationStart"] as CharSequence?
+            it.itemTextView5.text = item["applicationEnd"] as CharSequence?
         }
     }
 
@@ -41,7 +44,7 @@ class RecyclerAdapter(private val context: Context, private val itemClickListene
 
         mView.setOnClickListener { view ->
             mRecyclerView?.let {
-                itemClickListener.onItemClick(view, it.getChildAdapterPosition(view))
+                itemClickListener.onItemClick(view, itemList.get(it.getChildAdapterPosition(view)))
             }
         }
 
