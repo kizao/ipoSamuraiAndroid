@@ -23,7 +23,6 @@ class RecyclerAdapter(private val context: Context, private val itemClickListene
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         holder.let {
-
             var item = itemList!![position]
             it.itemTextView.text = item.companyNameAssessment as CharSequence?
             it.itemTextView2.text = item.minPrice.toString()

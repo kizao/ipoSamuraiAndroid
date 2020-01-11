@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
@@ -20,11 +21,10 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //val ipos  = mutableListOf<IpoData>()
         ipos = mutableListOf()
+        // firesotreから情報を取得する
         val db = FirebaseFirestore.getInstance()
-        var TAG =""
-        db.collection("ipoCompanies")
+        db.collection("ipoCompanies").orderBy("listingDate", Query.Direction.DESCENDING)
             .get()
             .addOnSuccessListener { result ->
                 for (document in result) {
@@ -55,13 +55,13 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
                         purchaseEnd,
                         listingDate
                     ))
-                    Log.d(TAG, "DocumentSnapshot data: ${companyName}")
+                    Log.d("TAG", "DocumentSnapshot data: ${companyName}")
                 }
                 mainRecyclerView.adapter = RecyclerAdapter(this, this, ipos)
                 mainRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
             }
             .addOnFailureListener { exception ->
-                Log.d(TAG, "Error getting documents: ", exception)
+                Log.d("TAG", "Error getting documents: ", exception)
             }
     }
 
