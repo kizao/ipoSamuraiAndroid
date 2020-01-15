@@ -10,7 +10,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.example.iposamurai"
+        applicationId "com.montamakk.iposamurai"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 1
@@ -41,5 +41,6 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'com.google.firebase:firebase-ads:18.0.0'
 }
 apply plugin: 'com.google.gms.google-services'

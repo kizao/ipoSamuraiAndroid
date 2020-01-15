@@ -3,8 +3,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.iposamurai.IpoData
-import com.example.iposamurai.R
+import com.montamakk.iposamurai.IpoData
+import com.montamakk.iposamurai.R
 
 class RecyclerAdapter(private val context: Context, private val itemClickListener: RecyclerViewHolder.ItemClickListener, private val itemList:MutableList<IpoData>?) : RecyclerView.Adapter<RecyclerViewHolder>() {
 

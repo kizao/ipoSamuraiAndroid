@@ -1,4 +1,4 @@
-package com.example.iposamurai
+package com.montamakk.iposamurai
 
 import RecyclerAdapter
 import RecyclerViewHolder
@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.ads.MobileAds
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.activity_main.*
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        MobileAds.initialize(this, "ca-app-pub-1021270898441250~9766048267")
 
         ipos = mutableListOf()
         // firesotreから情報を取得する

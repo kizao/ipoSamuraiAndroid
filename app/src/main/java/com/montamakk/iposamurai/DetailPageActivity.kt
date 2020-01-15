@@ -1,4 +1,4 @@
-package com.example.iposamurai
+package com.montamakk.iposamurai
 
 import android.os.Bundle
 import android.widget.TextView

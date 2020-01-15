@@ -2,8 +2,8 @@
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.iposamurai.IpoData
-import com.example.iposamurai.R
+import com.montamakk.iposamurai.IpoData
+import com.montamakk.iposamurai.R
 
 class RecyclerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
