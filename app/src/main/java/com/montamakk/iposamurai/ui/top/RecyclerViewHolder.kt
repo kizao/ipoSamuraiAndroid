@@ -2,14 +2,14 @@
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.montamakk.iposamurai.IpoData
 import com.montamakk.iposamurai.R
+import com.montamakk.iposamurai.model.IpoItem
 
 class RecyclerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     // 独自に作成したListener
     interface ItemClickListener {
-        fun onItemClick(view: View, item: IpoData)
+        fun onItemClick(view: View, item: IpoItem)
     }
 
     val itemTextView: TextView = view.findViewById(R.id.itemTextView)

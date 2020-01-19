@@ -1,12 +1,13 @@
 
+import RecyclerViewHolder.ItemClickListener
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.montamakk.iposamurai.IpoData
 import com.montamakk.iposamurai.R
+import com.montamakk.iposamurai.model.IpoItem
 
-class RecyclerAdapter(private val context: Context, private val itemClickListener: RecyclerViewHolder.ItemClickListener, private val itemList:MutableList<IpoData>?) : RecyclerView.Adapter<RecyclerViewHolder>() {
+class RecyclerAdapter(private val context: Context, private val itemClickListener: ItemClickListener, private val itemList: MutableList<IpoItem>?) : RecyclerView.Adapter<RecyclerViewHolder>() {
 
     private var mRecyclerView : RecyclerView? = null
 
@@ -18,22 +19,21 @@ class RecyclerAdapter(private val context: Context, private val itemClickListene
     override fun onDetachedFromRecyclerView(recyclerView: RecyclerView) {
         super.onDetachedFromRecyclerView(recyclerView)
         mRecyclerView = null
-
     }
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
         holder.let {
             var item = itemList!![position]
-            it.itemTextView.text = item.companyNameAssessment as CharSequence?
-            it.itemTextView2.text = item.minPrice.toString()
-            it.itemTextView3.text = item.maxPrice.toString()
-            it.itemTextView4.text = item.applicationStart as CharSequence?
-            it.itemTextView5.text = item.applicationEnd as CharSequence?
+            it.itemTextView.text = item.companyName
+            it.itemTextView2.text = item.minPrice
+            it.itemTextView3.text = item.maxPrice
+            it.itemTextView4.text = item.applicationStart
+            it.itemTextView5.text = item.applicationEnd
         }
     }
 
     override fun getItemCount(): Int {
-        return itemList!!.size
+       return itemList!!.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
@@ -49,5 +49,4 @@ class RecyclerAdapter(private val context: Context, private val itemClickListene
 
         return RecyclerViewHolder(mView)
     }
-
 }
