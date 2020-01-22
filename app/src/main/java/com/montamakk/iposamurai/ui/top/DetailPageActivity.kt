@@ -3,6 +3,7 @@ package com.montamakk.iposamurai.ui.top
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.montamakk.iposamurai.R
 import com.montamakk.iposamurai.R.id
 import com.montamakk.iposamurai.R.layout
 import com.montamakk.iposamurai.model.IpoItem
@@ -29,14 +30,15 @@ class DetailPageActivity : AppCompatActivity() {
         val listingDate: TextView = findViewById(id.listingDate)
 
         val ipo = intent.getSerializableExtra(KEY_STATE) as IpoItem
+        val moneyUnit = resources.getString(R.string.money_unit)
         if(ipo is IpoItem){
           companyName.text = ipo.companyName
           assessment.text = ipo.assessment
-          minPrice.text = if (ipo.minPrice == "-") ipo.minPrice else ipo.minPrice + "円"
-          maxPrice.text = if (ipo.maxPrice == "-") ipo.maxPrice else ipo.maxPrice + "円"
+          minPrice.text = if (ipo.minPrice == "-") ipo.minPrice else ipo.minPrice + moneyUnit
+          maxPrice.text = if (ipo.maxPrice == "-") ipo.maxPrice else ipo.maxPrice + moneyUnit
           applicationStart.text = ipo.applicationStart
           applicationEnd.text = ipo.applicationEnd
-          offeringPrice.text = if (ipo.offeringPrice == "-") ipo.offeringPrice else ipo.offeringPrice + "円"
+          offeringPrice.text = if (ipo.offeringPrice == "-") ipo.offeringPrice else ipo.offeringPrice + moneyUnit
           purchaseStart.text = ipo.purchaseStart
           purchaseEnd.text = ipo.purchaseEnd
           listingDate.text = ipo.listingDate

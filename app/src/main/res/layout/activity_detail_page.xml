@@ -24,7 +24,7 @@
                 android:layout_weight="1"
                 android:background= "#BBBBBB"
                 android:gravity="center_vertical"
-                android:text="概要データ"
+                android:text="@string/overview"
                 android:paddingStart="20px"
                 android:paddingLeft="10px" />
 
@@ -41,7 +41,7 @@
                 android:layout_weight="1"
                 android:background= "#EEEEEE"
                 android:gravity="center_vertical"
-                android:text="会社名"
+                android:text="@string/company_name"
                 android:paddingStart="20px"
                 android:paddingLeft="10px" />
             <TextView
@@ -66,7 +66,7 @@
                 android:layout_weight="1"
                 android:background="#EEEEEE"
                 android:gravity="center_vertical"
-                android:text="評価"
+                android:text="@string/assessment"
                 android:paddingStart="20px"
                 android:paddingLeft="10px" />
             <TextView
@@ -89,7 +89,7 @@
                 android:layout_weight="1"
                 android:background="#EEEEEE"
                 android:gravity="center_vertical"
-                android:text="仮条件下限価格"
+                android:text="@string/min_price"
                 android:paddingStart="20px"
                 android:paddingLeft="10px" />
             <TextView
@@ -111,7 +111,7 @@
                 android:layout_weight="1"
                 android:background="#EEEEEE"
                 android:gravity="center_vertical"
-                android:text="仮条件上限価格"
+                android:text="@string/max_price"
                 android:paddingStart="20px"
                 android:paddingLeft="10px" />
             <TextView
@@ -136,7 +136,7 @@
                 android:background="#EEEEEE"
                 android:baselineAligned="false"
                 android:gravity="center_vertical"
-                android:text="BB開始日"
+                android:text="@string/bb_period"
                 android:paddingStart="20px"
                 android:paddingLeft="10px" />
 
@@ -159,7 +159,7 @@
                 android:layout_weight="1"
                 android:background="#EEEEEE"
                 android:gravity="center_vertical"
-                android:text="BB終了日"
+                android:text="@string/bb_end"
                 android:paddingStart="20px"
                 android:paddingLeft="10px" />
             <TextView
@@ -181,7 +181,7 @@
                 android:layout_weight="1"
                 android:background="#EEEEEE"
                 android:gravity="center_vertical"
-                android:text="公開価格"
+                android:text="@string/offering_price"
                 android:paddingStart="20px"
                 android:paddingLeft="10px" />
             <TextView
@@ -204,7 +204,7 @@
                 android:layout_weight="1"
                 android:background="#EEEEEE"
                 android:gravity="center_vertical"
-                android:text="購入開始日"
+                android:text="@string/purchase_start"
                 android:paddingStart="20px"
                 android:paddingLeft="10px" />
             <TextView
@@ -226,7 +226,7 @@
                 android:layout_weight="1"
                 android:background="#EEEEEE"
                 android:gravity="center_vertical"
-                android:text="購入終了日"
+                android:text="@string/purchase_end"
                 android:paddingStart="20px"
                 android:paddingLeft="10px" />
             <TextView
@@ -248,7 +248,7 @@
                 android:layout_weight="1"
                 android:background="#EEEEEE"
                 android:gravity="center_vertical"
-                android:text="上場日"
+                android:text="@string/listing_date"
                 android:paddingStart="20px"
                 android:paddingLeft="10px" />
             <TextView

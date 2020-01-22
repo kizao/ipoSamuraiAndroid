@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">ipoSamurai</string>
+    <string name="company_name">会社名</string>
+    <string name="min_price">仮条件下限価格</string>
+    <string name="max_price">仮条件上限価格</string>
+    <string name="offering_price">公開価格</string>
+    <string name="application_start">申込開始日</string>
+    <string name="application_end">申込終了日</string>
+    <string name="purchase_start">購入開始日</string>
+    <string name="purchase_end">購入終了日</string>
+    <string name="listing_date">上場日</string>
+    <string name="assessment">評価</string>
+    <string name="money_unit">円</string>
+    <string name="tentatively_set_price_range">仮条件</string>
+    <string name="bb_period">BB期間</string>
+    <string name="bb_start">BB期間開始日</string>
+    <string name="bb_end">BB期間終了日</string>
+    <string name="overview">概要データ</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>

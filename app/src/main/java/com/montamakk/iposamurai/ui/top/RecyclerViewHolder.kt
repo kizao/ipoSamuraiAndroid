@@ -12,11 +12,11 @@ class RecyclerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun onItemClick(view: View, item: IpoItem)
     }
 
-    val itemTextView: TextView = view.findViewById(R.id.itemTextView)
-    val itemTextView2: TextView = view.findViewById(R.id.itemTextView2)
-    val itemTextView3: TextView = view.findViewById(R.id.itemTextView3)
-    val itemTextView4: TextView = view.findViewById(R.id.itemTextView4)
-    val itemTextView5: TextView = view.findViewById(R.id.itemTextView5)
+    val companyName: TextView = view.findViewById(R.id.companyName)
+    val minPrice: TextView = view.findViewById(R.id.minPrice)
+    val maxPrice: TextView = view.findViewById(R.id.maxPrice)
+    val applicationStart: TextView = view.findViewById(R.id.applicationStart)
+    val applicationEnd: TextView = view.findViewById(R.id.applicationEnd)
     init {
         // layoutの初期設定するときはココ
     }

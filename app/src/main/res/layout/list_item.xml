@@ -29,12 +29,11 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/itemTextView"
+                    android:id="@+id/companyName"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="111111111111" />
+                    android:gravity="center_vertical" />
             </TableRow>
         </TableLayout>
 
@@ -50,20 +49,18 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/itemTextView2"
+                    android:id="@+id/minPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="12/22" />
+                    android:gravity="center_vertical|center_horizontal" />
 
                 <TextView
-                    android:id="@+id/itemTextView4"
+                    android:id="@+id/applicationStart"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="12/24" />
+                    android:gravity="center_vertical|center_horizontal" />
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -71,20 +68,18 @@
                 android:layout_weight="1">
 
                 <TextView
-                    android:id="@+id/itemTextView3"
+                    android:id="@+id/maxPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="12/23" />
+                    android:gravity="center_vertical|center_horizontal" />
 
                 <TextView
-                    android:id="@+id/itemTextView5"
+                    android:id="@+id/applicationEnd"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:text="12/25" />
+                    android:gravity="center_vertical|center_horizontal" />
             </TableRow>
         </TableLayout>
     </LinearLayout>
