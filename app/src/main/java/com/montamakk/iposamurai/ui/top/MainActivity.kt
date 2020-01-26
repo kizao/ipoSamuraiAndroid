@@ -7,19 +7,26 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.tasks.OnSuccessListener
+import com.montamakk.iposamurai.R
 import com.montamakk.iposamurai.R.layout
 import com.montamakk.iposamurai.firestore.IpoData
 import com.montamakk.iposamurai.model.IpoItem
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
-
+    lateinit var mAdView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layout.activity_main)
-        MobileAds.initialize(this, "ca-app-pub-1021270898441250~9766048267")
+        MobileAds.initialize(this, resources.getString(R.string.banner_ad_app_id))
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+
         var ipoList: MutableList<IpoItem>? = mutableListOf()
         IpoData().getIpoCompanies(OnSuccessListener { result ->
             //TODO :取得した結果クラスには、オブジェクト化することができない...

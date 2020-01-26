@@ -19,7 +19,7 @@
         </activity>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1021270898441250~9766048267"/>
+            android:value="@string/banner_ad_app_id"/>
     </application>
 
 </manifest>
