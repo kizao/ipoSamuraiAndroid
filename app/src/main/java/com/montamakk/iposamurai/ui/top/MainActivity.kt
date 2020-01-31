@@ -4,6 +4,7 @@ import RecyclerAdapter
 import RecyclerViewHolder
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,6 +12,7 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.tasks.OnSuccessListener
+import com.google.firebase.auth.FirebaseAuth
 import com.montamakk.iposamurai.R
 import com.montamakk.iposamurai.R.layout
 import com.montamakk.iposamurai.firestore.IpoData
@@ -19,14 +21,20 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
     lateinit var mAdView : AdView
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layout.activity_main)
         MobileAds.initialize(this, resources.getString(R.string.banner_ad_app_id))
-        mAdView = findViewById(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        mAdView.loadAd(adRequest)
+        auth = FirebaseAuth.getInstance()
+        signInAnonymously()
+        initAd()
+        initTop()
 
+    }
+
+    private fun initTop() {
         var ipoList: MutableList<IpoItem>? = mutableListOf()
         IpoData().getIpoCompanies(OnSuccessListener { result ->
             //TODO :取得した結果クラスには、オブジェクト化することができない...
@@ -49,6 +57,23 @@ class MainActivity : AppCompatActivity(), RecyclerViewHolder.ItemClickListener {
             mainRecyclerView.adapter = RecyclerAdapter(this, this, ipoList)
             mainRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         })
+    }
+
+    private fun initAd() {
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
+    }
+
+    private fun signInAnonymously() {
+        auth.signInAnonymously()
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    Log.d("success", "currentUser = ${auth.currentUser?.uid.toString()}")
+                } else {
+                    Log.d("error", task.exception.toString())
+                }
+            }
     }
 
     override fun onItemClick(view: View, item: IpoItem) {
