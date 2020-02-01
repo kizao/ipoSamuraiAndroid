@@ -48,14 +48,23 @@ class RecyclerAdapter(private val context: Context, private val itemClickListene
         }else{
           holder.itemView.setBackgroundColor(ContextCompat.getColor(holder.itemView.getContext(), R.color.colorLightWhite))
         }
+        var assessment = 0
+        when(item.assessment) {
+            "A" -> assessment = R.drawable.a
+            "B" -> assessment = R.drawable.b
+            "C" -> assessment = R.drawable.c
+            "D" -> assessment = R.drawable.d
+            else -> assessment = R.drawable.question
+        }
 
 
         holder.let {
-            it.companyName.text = item.companyName
+            it.companyName.text = item.companyName.replace("株式会社", "").trim()
             it.minPrice.text = item.minPrice
             it.maxPrice.text = item.maxPrice
             it.applicationStart.text = item.applicationStart
             it.applicationEnd.text = item.applicationEnd
+            it.assessment.setImageResource(assessment)
         }
     }
 
