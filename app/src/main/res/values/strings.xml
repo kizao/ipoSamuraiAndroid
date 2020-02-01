@@ -16,5 +16,9 @@
     <string name="bb_start">BB期間開始日</string>
     <string name="bb_end">BB期間終了日</string>
     <string name="overview">概要データ</string>
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="default_notification_channel_id" translatable="false">my_app_fcm_default_channel</string>
+    <string name="default_notification_channel_name" translatable="false">ipo_smurai</string>
+    <string name="fcm_title">タイトル</string>
+    <string name="fcm_content">コンテンツ</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
 </resources>
