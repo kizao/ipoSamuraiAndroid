@@ -1,5 +1,6 @@
 
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.montamakk.iposamurai.R
@@ -17,6 +18,7 @@ class RecyclerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     val maxPrice: TextView = view.findViewById(R.id.maxPrice)
     val applicationStart: TextView = view.findViewById(R.id.applicationStart)
     val applicationEnd: TextView = view.findViewById(R.id.applicationEnd)
+    val assessment: ImageView = view.findViewById(R.id.assessment)
     init {
         // layoutの初期設定するときはココ
     }

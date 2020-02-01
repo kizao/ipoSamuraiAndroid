@@ -16,13 +16,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_margin="8dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
             tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="1dp">
+            tools:layout_editor_absoluteY="1dp"
+            android:background="@drawable/frame">
 
 
             <TableLayout
-                android:id="@+id/a"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="6">
@@ -33,17 +36,16 @@
                     android:layout_weight="1">
 
                     <TextView
-                        android:id="@+id/itemTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
+                        android:textSize="18dp"
                         android:text="@string/company_name" />
                 </TableRow>
             </TableLayout>
 
             <TableLayout
-                android:id="@+id/b"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="4">
@@ -54,18 +56,18 @@
                     android:layout_weight="1">
 
                     <TextView
-                        android:id="@+id/itemTextView2"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:textSize="18dp"
                         android:gravity="center_vertical|center_horizontal"
                         android:text="@string/tentatively_set_price_range" />
 
                     <TextView
-                        android:id="@+id/itemTextView4"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:textSize="18dp"
                         android:gravity="center_vertical|center_horizontal"
                         android:text="@string/bb_period" />
                 </TableRow>
