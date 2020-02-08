@@ -15,7 +15,7 @@
     <string name="bb_period">BB期間</string>
     <string name="bb_start">BB期間開始日</string>
     <string name="bb_end">BB期間終了日</string>
-    <string name="overview">概要データ</string>
+    <string name="overview">会社データ</string>
     <string name="default_notification_channel_id" translatable="false">my_app_fcm_default_channel</string>
     <string name="default_notification_channel_name" translatable="false">ipo_smurai</string>
     <string name="fcm_title">タイトル</string>

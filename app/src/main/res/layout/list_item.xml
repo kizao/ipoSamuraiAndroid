@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="120dp"
     android:layout_margin="10dp"
     card_view:cardElevation="6dp"
     android:foreground="?android:attr/selectableItemBackground">
@@ -34,65 +34,69 @@
                     android:paddingTop="15dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:gravity="center_horizontal" />
+                    android:gravity="center_vertical" />
 
                 <TextView
                     android:id="@+id/companyName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:paddingTop="25dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
                     android:layout_weight="1"
-                    android:textSize="16dp"
+                    android:textColor="#111111"
+                    android:textSize="18dp"
+                    android:gravity="center_vertical"
                     />
             </TableRow>
-        </TableLayout>
-
-        <TableLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4">
-
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
-
                 <TextView
-                    android:id="@+id/minPrice"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textSize="16dp"
                     android:gravity="center_vertical|center_horizontal" />
-
                 <TextView
-                    android:id="@+id/applicationStart"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:textSize="12dp"
+                    android:textColor="#666666"
+                    android:text = "仮条件 "
+                    android:gravity="right|center_vertical" />
+                <TextView
+                    android:id="@+id/proPrice"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:textSize="16dp"
+                    android:textColor="#111111"
                     android:gravity="center_vertical|center_horizontal" />
             </TableRow>
-
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:paddingBottom="5dp"
                 android:layout_weight="1">
-
                 <TextView
-                    android:id="@+id/maxPrice"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:textSize="16dp"
                     android:gravity="center_vertical|center_horizontal" />
-
                 <TextView
-                    android:id="@+id/applicationEnd"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:textSize="12dp"
+                    android:text = "BB期間 "
+                    android:textColor="#777777"
+                    android:gravity="right|center_vertical" />
+                <TextView
+                    android:id="@+id/applicationDate"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:textSize="16dp"
+                    android:textColor="#111111"
                     android:gravity="center_vertical|center_horizontal" />
             </TableRow>
         </TableLayout>

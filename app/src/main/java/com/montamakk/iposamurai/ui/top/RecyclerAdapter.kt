@@ -60,10 +60,8 @@ class RecyclerAdapter(private val context: Context, private val itemClickListene
 
         holder.let {
             it.companyName.text = item.companyName.replace("株式会社", "").trim()
-            it.minPrice.text = item.minPrice
-            it.maxPrice.text = item.maxPrice
-            it.applicationStart.text = item.applicationStart
-            it.applicationEnd.text = item.applicationEnd
+            it.proPrice.text = if (item.minPrice == "-") "未確定" else item.minPrice + " ～ " + item.maxPrice
+            it.applicationDate.text = item.applicationStart.substring(5, 10) + " ～ " +  item.applicationEnd.substring(5, 10)
             it.assessment.setImageResource(assessment)
         }
     }
