@@ -14,10 +14,8 @@ class RecyclerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     }
 
     val companyName: TextView = view.findViewById(R.id.companyName)
-    val minPrice: TextView = view.findViewById(R.id.minPrice)
-    val maxPrice: TextView = view.findViewById(R.id.maxPrice)
-    val applicationStart: TextView = view.findViewById(R.id.applicationStart)
-    val applicationEnd: TextView = view.findViewById(R.id.applicationEnd)
+    val proPrice: TextView = view.findViewById(R.id.proPrice)
+    val applicationDate: TextView = view.findViewById(R.id.applicationDate)
     val assessment: ImageView = view.findViewById(R.id.assessment)
     init {
         // layoutの初期設定するときはココ
